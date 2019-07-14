@@ -1,0 +1,36 @@
+<html>
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    
+  </head>
+  <body>
+  
+ 
+  
+  <span id="txt"></span><br />
+  <button id="add">+</button>
+  
+ </body> 
+  <script>
+	  if(!localStorage.getItem("txt")){
+           localStorage.setItem("txt",0);
+        }	  
+    var add=document.getElementById("add");
+    var txt=document.getElementById("txt");
+	txt.innerHTML=localStorage.getItem("txt"); 
+	
+     
+   add.onclick=function(){
+                var text=localStorage.getItem("txt"); 
+				 
+				 text++；
+				 txt.innerHTML=text；
+				 localStorage.setItem("txt",text);
+				
+				 
+              }
+      
+</script>
+  
+  </html>
